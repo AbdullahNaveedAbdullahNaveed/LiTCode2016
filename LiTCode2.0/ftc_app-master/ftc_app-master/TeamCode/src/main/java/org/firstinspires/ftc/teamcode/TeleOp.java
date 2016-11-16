@@ -16,11 +16,11 @@ import com.qualcomm.robotcore.hardware.ServoEx;
 @com.qualcomm.robotcore.eventloop.opmode.TeleOp(name="Pompeii: Teleop Tank", group="Pompeii")
 public class TeleOp extends OpMode
 {
-    public DriveSystem drive;
+        public DriveSystem drive;
 
     //  public FlyWheelMechanic flywheel;
 
-        public SweeperMechanic sweeper;
+       // public SweeperMechanic sweeper;
 
 //    public TrapDoorMechanic trapdoor;
 

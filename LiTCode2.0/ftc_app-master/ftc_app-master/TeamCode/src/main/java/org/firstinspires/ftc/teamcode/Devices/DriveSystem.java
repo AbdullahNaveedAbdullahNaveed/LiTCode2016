@@ -4,10 +4,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+//Reason sweeperMechanic is in here is to potetnially problem solve code issues
 public class DriveSystem
 {
     private DcMotor[] leftMotors;
     private DcMotor[] rightMotors;
+    private DcMotor sweeper;
 
     public DriveSystem(HardwareMap hardwareMap)
     {
@@ -15,7 +17,6 @@ public class DriveSystem
         leftMotors[0] = hardwareMap.dcMotor.get("frontLeftDriveMotor");
         leftMotors[1] = hardwareMap.dcMotor.get("backLeftDriveMotor");
 
-        //TODO Test differences between having setDirection and not.
         leftMotors[0].setDirection(DcMotorSimple.Direction.REVERSE);
         leftMotors[1].setDirection(DcMotorSimple.Direction.REVERSE);
 
@@ -23,10 +24,12 @@ public class DriveSystem
         rightMotors[0] = hardwareMap.dcMotor.get("frontRightDriveMotor");
         rightMotors[1] = hardwareMap.dcMotor.get("backRightDriveMotor");
 
-
-        //TODO Test differences between having setDirection and not.
         rightMotors[0].setDirection(DcMotorSimple.Direction.FORWARD);
         rightMotors[1].setDirection(DcMotorSimple.Direction.FORWARD);
+
+        //Reason sweeperMechanic is in here is to potetnially problem solve code issues
+        sweeperMotor = new DcMotor;
+        sweeperMotor = hardwareMap.dcMotor.get("sweeperMotor");
 
     }
 
@@ -51,9 +54,11 @@ public class DriveSystem
             motor.setPower(convertedPower);
         }
     }
+    //Reason sweeperMechanic is in here is to potetnially problem solve code issues
     public synchronized void setBoth (double leftPower, double rightPower)
     {
         setLeft(leftPower);
         setRight(rightPower);
+
     }
 }
