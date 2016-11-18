@@ -16,11 +16,11 @@ import com.qualcomm.robotcore.hardware.ServoEx;
 @com.qualcomm.robotcore.eventloop.opmode.TeleOp(name="Pompeii: Teleop Tank", group="Pompeii")
 public class TeleOp extends OpMode
 {
-        public DriveSystem drive;
+        //public DriveSystem drive;
 
     //  public FlyWheelMechanic flywheel;
 
-       // public SweeperMechanic sweeper;
+        public SweeperMechanic sweeper;
 
 //    public TrapDoorMechanic trapdoor;
 
@@ -33,7 +33,7 @@ public class TeleOp extends OpMode
       //  flywheel = new FlyWheelMechanic(hardwareMap);
         sweeper = new SweeperMechanic(hardwareMap);
      //   trapdoor = new TrapDoorMechanic(hardwareMap);
-        drive = new DriveSystem(hardwareMap);
+        //drive = new DriveSystem(hardwareMap);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class TeleOp extends OpMode
     {
 
         // Getting joystick values
-        double leftJoystick = gamepad1.left_stick_y;
+        /*double leftJoystick = gamepad1.left_stick_y;
         double rightJoystick = gamepad1.right_stick_y;
         if(leftJoystick > 0.05 || leftJoystick < -0.05)
         {
@@ -57,7 +57,7 @@ public class TeleOp extends OpMode
         }
         else {
             drive.setRight(0);
-        }
+        }*/
 
 
         //set motor power

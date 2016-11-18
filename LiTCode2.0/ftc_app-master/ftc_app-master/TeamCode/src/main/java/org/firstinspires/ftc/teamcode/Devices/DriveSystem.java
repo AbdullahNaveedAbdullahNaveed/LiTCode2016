@@ -27,9 +27,9 @@ public class DriveSystem
         rightMotors[0].setDirection(DcMotorSimple.Direction.FORWARD);
         rightMotors[1].setDirection(DcMotorSimple.Direction.FORWARD);
 
-        //Reason sweeperMechanic is in here is to potetnially problem solve code issues
-        sweeperMotor = new DcMotor;
-        sweeperMotor = hardwareMap.dcMotor.get("sweeperMotor");
+        //Reason sweeperMechanic is in here is to potentially problem solve code issues
+       /* sweeperMotor = new DcMotor;
+        sweeperMotor = hardwareMap.dcMotor.get("sweeperMotor");*/
 
     }
 
@@ -54,11 +54,18 @@ public class DriveSystem
             motor.setPower(convertedPower);
         }
     }
+    /*public static synchronized void setPower(double power)
+    {
+
+        axelRotation.setPower(power);*/
+    }
+
     //Reason sweeperMechanic is in here is to potetnially problem solve code issues
-    public synchronized void setBoth (double leftPower, double rightPower)
+    public synchronized void setBoth (double leftPower, double rightPower, /*double setPower*/)
     {
         setLeft(leftPower);
         setRight(rightPower);
+
 
     }
 }
